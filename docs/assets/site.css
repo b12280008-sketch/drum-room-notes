@@ -88,7 +88,7 @@ h2 { font-size: clamp(1.5rem, 3.6vw, 2.35rem); }
 .player-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .tempo-control { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: .89rem; }
 .tempo-control input { width: 73px; min-height: 42px; padding: 6px 8px; border-radius: 7px; border: 1px solid #aeb6c3; background: #fff; color: var(--ink); }
-.score-scroll { overflow-x: auto; max-width: 100%; margin-top: 17px; border-radius: 7px; }
+.score-scroll { position: relative; overflow-x: auto; max-width: 100%; margin-top: 17px; border-radius: 7px; }
 .score { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 630px; table-layout: fixed; font-size: .87rem; text-align: center; font-variant-numeric: tabular-nums; }
 .score th:first-child { width: 74px; text-align: left; white-space: nowrap; }
 .score th, .score td { padding: 7px 1px; height: 35px; }

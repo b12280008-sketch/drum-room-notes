@@ -25,6 +25,7 @@ python3 -m http.server 8000 --directory docs
 - 新增 `docs/practice/fourth-beat-fill/index.html`，首頁自動列出第三張卡片。
 - 「反拍大鼓」的下一張連結自動指向新頁面。新增卡片的提交只包含一個來源資料檔與對應的網站輸出。
 - 執行建置檢查並核對四頁的相對連結。從首頁開啟新卡片，用鍵盤啟動與停止 64 BPM 的示範，確認節奏譜的高亮會跟著更新。
+- 在 375 px 的預覽中確認整頁寬度符合視窗，節奏譜仍可水平捲動。
 
 ## GitHub Pages
 
