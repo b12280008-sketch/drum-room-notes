@@ -1,0 +1,19 @@
+{
+  "slug": "eighth-note-groove",
+  "order": 1,
+  "title": "8 Beat 穩拍",
+  "level": "基礎",
+  "tempo": 70,
+  "summary": "維持 Hi-hat 的八分音符，讓軍鼓固定落在第 2、4 拍。",
+  "pattern": {
+    "hat": "x-x-x-x-x-x-x-x-",
+    "snare": "----X-------X---",
+    "kick": "X-------X-------"
+  },
+  "steps": [
+    "先在 70 BPM 下數 1 & 2 & 3 & 4 &。",
+    "Hi-hat 每個數字和 & 都打一下，軍鼓放第 2、4 拍。",
+    "加上第 1、3 拍的大鼓，循環練四小節。"
+  ],
+  "checkpoint": "連續四小節維持等距的 Hi-hat，軍鼓與大鼓都落在指定拍點。"
+}

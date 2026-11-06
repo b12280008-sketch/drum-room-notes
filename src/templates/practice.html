@@ -1,0 +1,32 @@
+<header class="practice-intro">
+  <a class="back" href="../../#cards">← 所有練習卡</a>
+  <p class="eyebrow">CARD $number <span class="dot"></span> $level</p>
+  <h1>$title</h1>
+  <p class="lead">$summary</p>
+</header>
+<section class="practice-panel" aria-labelledby="score-title">
+  <div class="score-heading">
+    <div><p class="eyebrow">4/4 拍 · 1 小節</p><h2 id="score-title">節奏譜</h2></div>
+    <div class="player-controls" data-player>
+      <label class="tempo-control" for="tempo">速度 <input id="tempo" type="number" min="40" max="180" step="1" value="$tempo" inputmode="numeric" required> BPM</label>
+      <button class="button" type="button" id="play-pattern" aria-pressed="false">播放節奏</button>
+    </div>
+  </div>
+  <div class="score-scroll" tabindex="0" role="region" aria-label="可水平捲動的節奏譜">$score</div>
+  <ul class="legend"><li><b class="mark">x</b> 一般敲擊</li><li><b class="mark accent-mark">X</b> 重音</li><li><b class="mark quiet">−</b> 休止</li></ul>
+  <p id="player-status" class="player-status" role="status">建議從 $tempo BPM 開始。播放時會以合成音循環示範。</p>
+</section>
+<div class="practice-body">
+  <section class="steps" aria-labelledby="steps-title">
+    <p class="eyebrow">PRACTICE</p><h2 id="steps-title">怎麼練</h2>
+    <ol>$steps</ol>
+  </section>
+  <aside class="checkpoint" aria-labelledby="check-title">
+    <p class="eyebrow">CHECKPOINT</p><h2 id="check-title">練穩了嗎</h2>
+    <p>$checkpoint</p>
+  </aside>
+</div>
+<nav class="card-navigation" aria-label="練習卡導覽">
+  <a class="back" href="../../#cards">← 所有練習卡</a>
+  $next_link
+</nav>

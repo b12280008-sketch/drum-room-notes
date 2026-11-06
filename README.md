@@ -1,0 +1,23 @@
+# 鼓房筆記
+
+用一張張短練習卡整理爵士鼓節奏。每頁有建議 BPM、一小節 4/4 節奏譜、合成音示範、三個步驟及自我檢查。
+
+## 開發與預覽
+
+需要 Python 3 和瀏覽器。在專案根目錄執行以下指令。
+
+```sh
+python3 scripts/build.py
+python3 scripts/build.py --check
+python3 -m http.server 8000 --directory docs
+```
+
+在瀏覽器開啟 `http://localhost:8000/`。網站由 `docs/` 的靜態檔案組成，頁面的合成節奏在瀏覽器內播放。
+
+## 新增一張卡片
+
+照 [AGENTS.md](AGENTS.md) 的格式，在 `content/` 新增一個 JSON。建置程式會檢查欄位及節奏格數，按照 `order` 產生首頁清單、卡片頁和下一張連結。建置後執行 `--check`，確認實際網站與來源資料相符。
+
+## GitHub Pages
+
+Repository 的 Settings → Pages 選擇 Deploy from a branch。使用 `main` 分支和 `/docs` 資料夾。建置結果與來源一併提交，助教可從 Repository 檢查規則，也可以直接瀏覽網站。
