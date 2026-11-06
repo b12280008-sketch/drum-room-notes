@@ -39,11 +39,10 @@ h2 { font-size: clamp(1.5rem, 3.6vw, 2.35rem); }
 .meta-label { color: var(--muted); font-size: .8rem; font-weight: 650; }
 .hero h1 { font-size: clamp(2.7rem, 5.45vw, 4.3rem); margin-bottom: 16px; }
 .lead { color: var(--muted); font-size: clamp(1rem, 1.9vw, 1.17rem); max-width: 36rem; }
-.hero-copy .lead { max-width: 24em; }
 .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: var(--accent); color: #fff; border: 1px solid var(--accent); border-radius: 9px; padding: 9px 17px; font-weight: 700; text-decoration: none; cursor: pointer; }
 .button:hover { background: #192f59; color: #fff; }
 .button:disabled { opacity: .68; cursor: wait; }
-.hero .button { margin-top: 24px; }
+.hero .button { margin-top: 8px; }
 .hero-sheet { position: relative; min-width: 0; background: var(--card); border: 1px solid #b8c4d8; border-radius: 16px; padding: clamp(15px, 3vw, 28px); box-shadow: 10px 11px 0 var(--blue-soft); }
 .hero-sheet::before { content: ""; display: block; position: absolute; width: 48px; height: 6px; border-radius: 0 0 5px 5px; background: var(--sun); top: 0; left: 25px; }
 .sheet-head, .section-head, .score-heading, .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
