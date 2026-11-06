@@ -12,7 +12,7 @@ from string import Template
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs"
 TEMPLATES = ROOT / "src" / "templates"
-TRACKS = {"hat": "Hi-hat", "snare": "軍鼓", "kick": "大鼓"}
+TRACKS = {"hat": "Hi-hat", "snare": "小鼓", "kick": "大鼓"}
 MARKS = {"x": ("hit", "x", "敲擊"), "X": ("accent", "X", "重音"), "-": ("rest", "−", "休止")}
 FIELDS = {"slug", "order", "title", "level", "tempo", "summary", "pattern", "steps", "checkpoint"}
 
@@ -92,18 +92,24 @@ def render_home(cards):
     items = []
     for card in cards:
         url = f'practice/{card["slug"]}/'
+        title_id = f'card-title-{card["slug"]}'
         title = html.escape(card["title"])
         items.append(f'''<article class="practice-card">
-  <div class="card-meta"><span class="card-number">{card['order']:02}</span><span class="level">{card['level']}</span></div>
-  <h3><a href="{url}">{title}</a></h3>
-  <p>{html.escape(card['summary'])}</p>
-  <div class="card-bottom"><span class="tempo-tag">{card['tempo']} BPM</span><a href="{url}" aria-label="練習{title}">開始練習 <span aria-hidden="true">↗</span></a></div>
+  <a class="card-link" href="{url}" aria-labelledby="{title_id}">
+    <div class="card-meta"><span class="card-number">{card['order']:02}</span><span class="level">{card['level']}</span></div>
+    <h3 id="{title_id}">{title}</h3>
+    <p>{html.escape(card['summary'])}</p>
+    <div class="card-bottom">
+      <span class="tempo-tag">{card['tempo']} BPM</span>
+      <span class="card-action" aria-hidden="true">打開練習 <span>→</span></span>
+    </div>
+  </a>
 </article>''')
     first = cards[0]
     # The cover shows the first card's full grid, compressed with CSS.
     content = template("home.html", example_title=html.escape(first["title"]), example_tempo=first["tempo"],
                        example_score=score(first), card_count=len(cards), cards="\n".join(items))
-    return render_base("鼓房筆記 · 爵士鼓練習卡", "一頁一張爵士鼓練習卡，從節奏譜和合成示範開始練。", "./", content)
+    return render_base("爵士鼓練習筆記 · 鼓房筆記", "看爵士鼓節奏譜、試聽並調整練習速度。", "./", content)
 
 
 def render_practice(card, following):

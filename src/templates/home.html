@@ -1,30 +1,29 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="dot"></span> DRUM ROOM NOTES</p>
-    <h1 id="hero-title">鼓房筆記<span>.</span></h1>
-    <p class="lead">給自練鼓手的節奏卡。先把一小節打穩，再加下一個動作。</p>
-    <a class="button" href="#cards">挑一張練習卡 <span aria-hidden="true">↓</span></a>
+    <h1 id="hero-title">爵士鼓練習筆記</h1>
+    <p class="lead">這裡整理了幾個爵士鼓節奏。點一張卡片就能看譜和試聽，速度也能自己調。</p>
+    <a class="button" href="#cards">看練習卡 <span aria-hidden="true">↓</span></a>
   </div>
   <figure class="hero-sheet">
     <div class="sheet-head">
-      <div><p class="eyebrow">一小節示範</p><strong>$example_title</strong></div>
+      <div><p class="meta-label">節奏譜範例</p><strong>$example_title</strong></div>
       <span class="tempo-tag">$example_tempo BPM</span>
     </div>
     <div class="score-scroll compact" tabindex="0" role="region" aria-label="示範節奏譜">$example_score</div>
-    <figcaption><span class="dot"></span> 4/4 拍 · 每拍四格</figcaption>
+    <figcaption>4/4 拍，每拍四格</figcaption>
   </figure>
 </section>
 <section id="cards" class="catalog" aria-labelledby="cards-title">
   <div class="section-head">
-    <div><p class="eyebrow">PRACTICE CARDS</p><h2 id="cards-title">練習卡</h2></div>
-    <span class="count-label">$card_count 張練習</span>
+    <h2 id="cards-title">練習卡</h2>
+    <span class="count-label">共 $card_count 張</span>
   </div>
   <div class="card-grid">$cards</div>
 </section>
 <section id="notation" class="notation" aria-labelledby="notation-title">
-  <div><p class="eyebrow">READ THE GRID</p><h2 id="notation-title">讀節奏譜</h2></div>
+  <h2 id="notation-title">看譜說明</h2>
   <div>
-    <p>每小節有 4 拍，每拍用數字、e、&amp;、a 分成四格。從左往右讀，同一欄的樂器一起打。</p>
+    <p>從左往右看，數字 1 到 4 是正拍，後面的 e、&amp;、a 是同一拍的另外三格。同一欄有兩個記號，就一起打。</p>
     <ul class="legend">
       <li><b class="mark">x</b> 一般敲擊</li>
       <li><b class="mark accent-mark">X</b> 重音</li>

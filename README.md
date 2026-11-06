@@ -1,6 +1,6 @@
 # 鼓房筆記
 
-用一張張短練習卡整理爵士鼓節奏。每頁有建議 BPM、一小節 4/4 節奏譜、合成音示範、三個步驟及自我檢查。
+這是爵士鼓練習筆記。每頁有建議 BPM、一小節 4/4 節奏譜、試聽、練習步驟和容易打錯的地方。
 
 ## 開發與預覽
 
@@ -20,7 +20,7 @@ python3 -m http.server 8000 --directory docs
 
 ## 擴充示範
 
-初版有「8 Beat 穩拍」與「反拍大鼓」兩張卡片。接著依 `AGENTS.md` 的任務範例，加入 [第 4 拍過門的資料](content/fourth-beat-fill.json) 並重建網站。
+初版有「8 Beat 基本節奏」與「反拍大鼓」兩張卡片。接著依 `AGENTS.md` 的任務範例，加入 [第 4 拍過門的資料](content/fourth-beat-fill.json) 並重建網站。
 
 - 新增 `docs/practice/fourth-beat-fill/index.html`，首頁自動列出第三張卡片。
 - 「反拍大鼓」的下一張連結自動指向新頁面。新增卡片的提交只包含一個來源資料檔與對應的網站輸出。
