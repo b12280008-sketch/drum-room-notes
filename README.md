@@ -18,6 +18,14 @@ python3 -m http.server 8000 --directory docs
 
 照 [AGENTS.md](AGENTS.md) 的格式，在 `content/` 新增一個 JSON。建置程式會檢查欄位及節奏格數，按照 `order` 產生首頁清單、卡片頁和下一張連結。建置後執行 `--check`，確認實際網站與來源資料相符。
 
+## 擴充示範
+
+初版有「8 Beat 穩拍」與「反拍大鼓」兩張卡片。接著依 `AGENTS.md` 的任務範例，加入 [第 4 拍過門的資料](content/fourth-beat-fill.json) 並重建網站。
+
+- 新增 `docs/practice/fourth-beat-fill/index.html`，首頁自動列出第三張卡片。
+- 「反拍大鼓」的下一張連結自動指向新頁面。新增卡片的提交只包含一個來源資料檔與對應的網站輸出。
+- 執行建置檢查並核對四頁的相對連結。從首頁開啟新卡片，用鍵盤啟動與停止 64 BPM 的示範，確認節奏譜的高亮會跟著更新。
+
 ## GitHub Pages
 
 Repository 的 Settings → Pages 選擇 Deploy from a branch。使用 `main` 分支和 `/docs` 資料夾。建置結果與來源一併提交，助教可從 Repository 檢查規則，也可以直接瀏覽網站。
